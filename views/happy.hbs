@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width", initial-scale=1>
-  <meta name="author" content="">
-  <meta name="description" content=" ">
-  <meta name="keywords" content="">
+  <meta name="author" content="Adrianna Doutzen D. Pena">
+  <meta name="description" content="Happy bday">
+  <meta name="keywords" content="happy">
   <title>Canseco - CS 3 </title>
   <!-- using the w3.css framework to show how predefined css classes can be used inside an html document.  -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -14,6 +14,7 @@
   <link href="style.css" rel="stylesheet" type="text/css" />
 
   <link rel="icon" type="image/x-icon" href="">
+  
 </head>
 
 <!--- classes that starts with w3 are defined inside w3.css -->
@@ -29,20 +30,124 @@
 
 
   <header class="w3-container" id="header" > 
-    <h1>Roy Canseco - III-K - Jan 2025</h1>
+    <h1>Addie Pena - 9-Sr - March 2025</h1>
     <h2> Birthday </h2>
   </header>
 
   <section class="w3-container" id="input"> 
-    <h2>Output</h2>
-    <!-- Place your output here -->
-  </section>
+    <div  id = "output">
+        <h2>Output <br></h2>
+        {{#each data}}
+          {{@key}}: {{this}} <br>
+        {{/each}}
+    </div>
+
+    <h2>Happy Birthday Song</h2>
+    {{#if data.name1}}
+      {{#if data.checkbox1}}
+        {{data.name1}}
+      {{/if}}
+    {{/if}} : Happy <br> 
+
+   {{#if data.name2}}
+      {{#if data.checkbox2}}
+        {{data.name2}}
+      {{/if}}
+    {{/if}} : birthday <br> 
+
+    {{#if data.name3}}
+      {{#if data.checkbox3}}
+        {{data.name3}}
+      {{/if}}
+    {{/if}} : to <br> 
+
+    {{#if data.name4}}
+      {{#if data.checkbox4}}
+        {{data.name4}}
+      {{/if}}
+    {{/if}} : you! <br> 
+
+    {{#if data.name5}}
+      {{#if data.checkbox5}}
+        {{data.name5}}
+      {{/if}}
+    {{/if}} : Happy <br> 
+
+    {{#if data.name6}}
+      {{#if data.checkbox6}}
+        {{data.name6}}
+      {{/if}}
+    {{/if}} : birthday <br> 
+
+    {{#if data.name7}}
+      {{#if data.checkbox7}}
+        {{data.name7}}
+      {{/if}}
+    {{/if}} : to <br> 
+
+    {{#if data.name8}}
+      {{#if data.checkbox8}}
+        {{data.name8}}
+      {{/if}}
+    {{/if}} : you! <br> 
+
+    {{#if data.name9}}
+      {{#if data.checkbox9}}
+        {{data.name9}}
+      {{/if}}
+    {{/if}} : Happy <br> 
+
+    {{#if data.name10}}
+      {{#if data.checkbox10}}
+        {{data.name10}}
+      {{/if}}
+    {{/if}} : birthday <br> 
+
+    {{#if data.name11}}
+      {{#if data.checkbox11}}
+        {{data.name11}}
+      {{/if}}
+    {{/if}} : happy <br> 
+
+    {{#if data.name12}}
+      {{#if data.checkbox12}}
+        {{data.name12}}
+      {{/if}}
+    {{/if}} : birthday <br>
+
+    {{#if data.name13}}
+      {{#if data.checkbox13}}
+        {{data.name13}}
+      {{/if}}
+    {{/if}} : happy <br>  
+
+    {{#if data.name14}}
+      {{#if data.checkbox14}}
+        {{data.name14}}
+      {{/if}}
+    {{/if}} : birthday <br> 
+
+    {{#if data.name15}}
+      {{#if data.checkbox15}}
+        {{data.name15}}
+      {{/if}}
+    {{/if}} : to <br> 
+
+    {{#if data.name16}}
+      {{#if data.checkbox16}}
+        {{data.name16}}
+      {{/if}}
+    {{/if}} : you! <br> 
+
+<p>For {{#if data.gender}}{{#if data.gender.female}}she's{{else}}he's{{/if}}{{/if}} a jolly good fellow, for {{#if data.gender}}{{#if data.gender.female}}she's{{else}}he's{{/if}}{{/if}} a jolly good fellow, for {{#if data.gender}}{{#if data.gender.female}}she's{{else}}he's{{/if}}{{/if}} a jolly good fellow, which nobody can deny!</p>
+       
 
   <footer class="w3-container ">
-    <p> &copy; 2024 CS3 Teachers </p>
+    <p> &copy; 2025 Pena </p>
   </footer>
 
   
 </body>
 
 </html>
+
