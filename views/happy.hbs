@@ -8,146 +8,47 @@
   <meta name="description" content="Happy bday">
   <meta name="keywords" content="happy">
   <title>Pena - CS 3 </title>
-  <!-- using the w3.css framework to show how predefined css classes can be used inside an html document.  -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <!-- local css property definitions to further enhance the page -->
   <link href="style.css" rel="stylesheet" type="text/css" />
-
   <link rel="icon" type="image/x-icon" href="">
-  
 </head>
 
-<!--- classes that starts with w3 are defined inside w3.css -->
 <body class="w3-container w3-auto">
-
-  <!-- do define the navigation bar using classes to define a button styled as a link
-      take note: just a demonsration on how it can be used. Responsive to the size of the viewport
-  -->
   <div class="w3-bar w3-black">
     <a href="/" class="w3-bar-item w3-button w3-mobile">Home</a>
     <a href="#" class="w3-bar-item w3-button w3-mobile">Happy</a> 
   </div>
 
-
-  <header class="w3-container" id="header" > 
+  <header class="w3-container" id="header"> 
     <h1>Addie Pena - 9-Sr - March 2025</h1>
     <h2> Birthday </h2>
   </header>
 
   <section class="w3-container" id="input"> 
+
     <div  id = "output">
         <h2>Output <br></h2>
         {{#each data}}
           {{@key}}: {{this}} <br>
         {{/each}}
-    </div>
+    </div> 
 
-    <h2>Happy Birthday Song</h2>
-    {{#if data.name1}}
-      {{#if data.checkbox1}}
-        {{data.name1}}
+    <h2>Happy Birthday Song:</h2>
+    
+    {{#each data}}
+      {{#if (lookup ../data (concat "checkbox" (last @key)))}}
+        {{#if (startsWith @key "name")}}
+          <p>{{this}}</p>
+        {{/if}}
       {{/if}}
-    {{/if}} : Happy <br> 
+    {{/each}}
 
-   {{#if data.name2}}
-      {{#if data.checkbox2}}
-        {{data.name2}}
-      {{/if}}
-    {{/if}} : birthday <br> 
+    <p>For {{#if data.gender}}{{#if (eq data.gender "female")}}she's{{else}}he's{{/if}}{{/if}} a jolly good fellow, for {{#if data.gender}}{{#if (eq data.gender "female")}}she's{{else}}he's{{/if}}{{/if}} a jolly good fellow, for {{#if data.gender}}{{#if (eq data.gender "female")}}she's{{else}}he's{{/if}}{{/if}} a jolly good fellow, which nobody can deny! </p>
 
-    {{#if data.name3}}
-      {{#if data.checkbox3}}
-        {{data.name3}}
-      {{/if}}
-    {{/if}} : to <br> 
+  </section>
 
-    {{#if data.name4}}
-      {{#if data.checkbox4}}
-        {{data.name4}}
-      {{/if}}
-    {{/if}} : you! <br> 
-
-    {{#if data.name5}}
-      {{#if data.checkbox5}}
-        {{data.name5}}
-      {{/if}}
-    {{/if}} : Happy <br> 
-
-    {{#if data.name6}}
-      {{#if data.checkbox6}}
-        {{data.name6}}
-      {{/if}}
-    {{/if}} : birthday <br> 
-
-    {{#if data.name7}}
-      {{#if data.checkbox7}}
-        {{data.name7}}
-      {{/if}}
-    {{/if}} : to <br> 
-
-    {{#if data.name8}}
-      {{#if data.checkbox8}}
-        {{data.name8}}
-      {{/if}}
-    {{/if}} : you! <br> 
-
-    {{#if data.name9}}
-      {{#if data.checkbox9}}
-        {{data.name9}}
-      {{/if}}
-    {{/if}} : Happy <br> 
-
-    {{#if data.name10}}
-      {{#if data.checkbox10}}
-        {{data.name10}}
-      {{/if}}
-    {{/if}} : birthday <br> 
-
-    {{#if data.name11}}
-      {{#if data.checkbox11}}
-        {{data.name11}}
-      {{/if}}
-    {{/if}} : happy <br> 
-
-    {{#if data.name12}}
-      {{#if data.checkbox12}}
-        {{data.name12}}
-      {{/if}}
-    {{/if}} : birthday <br>
-
-    {{#if data.name13}}
-      {{#if data.checkbox13}}
-        {{data.name13}}
-      {{/if}}
-    {{/if}} : happy <br>  
-
-    {{#if data.name14}}
-      {{#if data.checkbox14}}
-        {{data.name14}}
-      {{/if}}
-    {{/if}} : birthday <br> 
-
-    {{#if data.name15}}
-      {{#if data.checkbox15}}
-        {{data.name15}}
-      {{/if}}
-    {{/if}} : to <br> 
-
-    {{#if data.name16}}
-      {{#if data.checkbox16}}
-        {{data.name16}}
-      {{/if}}
-    {{/if}} : you! <br> 
-
-<p>For {{#if data.gender}}{{#if data.gender.female}}she's{{else}}he's{{/if}}{{/if}} a jolly good fellow, for {{#if data.gender}}{{#if data.gender.female}}she's{{else}}he's{{/if}}{{/if}} a jolly good fellow, for {{#if data.gender}}{{#if data.gender.female}}she's{{else}}he's{{/if}}{{/if}} a jolly good fellow, which nobody can deny!</p>
-       
-
-  <footer class="w3-container ">
+  <footer class="w3-container">
     <p> &copy; 2025 Pena </p>
   </footer>
-
-  
 </body>
-
 </html>
-
